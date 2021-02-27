@@ -7,19 +7,23 @@
 
 import UIKit
 
-var storeArray = ["슬슬브라우니", "아름돈카츠", "선데이밀 강남점", "바이러브하니"]
-var storeImageArray = ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg", "7.jpeg", "8.jpeg", "9.jpeg", "10.jpeg"]
+var storeArray = ["슬슬브라우니", "아름돈카츠", "선데이밀 강남점", "바이러브하니", "맥도날드", "버거킹"]
+var storeImageArray = ["1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg" ]
 class HomeTableViewController: UITableViewController{
 
+    @IBOutlet var tableViewcell: UITableView!
     
+    var dataList = [[String:String]]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        for index in 0...storeArray.count - 1{
+            dataList.append(["storeName":storeArray[index], "img":storeImageArray[index]])
+        }
+        
+        //tableViewcell.delegate = self
+        //tableViewcell.dataSource = self
     }
 
     // MARK: - Table view data source
@@ -37,10 +41,16 @@ class HomeTableViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! tableViewCellTableViewCell
-        cell.lblstoreName.text = storeArray[indexPath.row]
-        cell.storeImgView.image = UIImage(named: storeImageArray[indexPath.row])
+        let currentCellStore = dataList[indexPath.row]
+        cell.lblstoreName.text = currentCellStore["storeName"]
+        cell.storeImgView.image = UIImage(named: currentCellStore["img"]!)
+        cell.storeNameStack.layer.addBorder([.bottom], color: UIColor.gray, width: 1)
+        cell.lblPeopleNum.layer.addBorder([.right], color: UIColor.gray, width: 1)
+        //cell.entireCellstack.layer.addBorder([.all], color: UIColor.gray, width: 1)
         return cell
     }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -88,4 +98,30 @@ class HomeTableViewController: UITableViewController{
     */
 
 }
+extension CALayer {
+    func addBorder(_ arr_edge:[UIRectEdge], color: UIColor, width: CGFloat){
+        for edge in arr_edge{
+            let border = CALayer()
+            switch edge {
+            case UIRectEdge.top:
+                border.frame = CGRect.init(x: 0, y: 0, width: frame.width, height: width)
+                break
+            case UIRectEdge.bottom:
+                border.frame = CGRect.init(x: 0, y: frame.height - width, width: frame.width, height: width)
+                break
+            case UIRectEdge.left:
+                border.frame = CGRect.init(x: 0, y: 0, width: width, height: frame.height)
+                break
+            case UIRectEdge.right:
+                border.frame = CGRect.init(x: frame.width - width, y: 0, width: width, height: frame.height)
+                break
+            default:
+                break
+            }
+            border.backgroundColor = color.cgColor;
+            self.addSublayer(border)
+            }
+        }
+    }
+
 
