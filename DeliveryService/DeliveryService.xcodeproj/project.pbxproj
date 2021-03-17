@@ -28,6 +28,7 @@
 		280AAAAC25E8E1C200B073A8 /* 10.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 280AAAA225E8E1C200B073A8 /* 10.jpeg */; };
 		280AAAAD25E8E1C200B073A8 /* 9.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 280AAAA325E8E1C200B073A8 /* 9.jpeg */; };
 		280AAAB225E8EAB300B073A8 /* tableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280AAAB125E8EAB300B073A8 /* tableViewCellTableViewCell.swift */; };
+		288D6CF625F9A17000DDA8B9 /* placeOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D6CF525F9A17000DDA8B9 /* placeOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		280AAAA225E8E1C200B073A8 /* 10.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpeg; sourceTree = "<group>"; };
 		280AAAA325E8E1C200B073A8 /* 9.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpeg; sourceTree = "<group>"; };
 		280AAAB125E8EAB300B073A8 /* tableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		288D6CF525F9A17000DDA8B9 /* placeOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				280AAA7425E8C89D00B073A8 /* AppDelegate.swift */,
 				280AAA7625E8C89D00B073A8 /* SceneDelegate.swift */,
 				280AAA7A25E8C89D00B073A8 /* Main.storyboard */,
+				288D6CF525F9A17000DDA8B9 /* placeOrderViewController.swift */,
 				280AAA8C25E8CB0D00B073A8 /* HomeTableViewController.swift */,
 				280AAAB125E8EAB300B073A8 /* tableViewCellTableViewCell.swift */,
 				280AAA9625E8CD9400B073A8 /* CommunityViewController.swift */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				280AAA8A25E8C99D00B073A8 /* MypageController.swift in Sources */,
+				288D6CF625F9A17000DDA8B9 /* placeOrderViewController.swift in Sources */,
 				280AAA9025E8CC9C00B073A8 /* ReservationCollectionViewController.swift in Sources */,
 				280AAAB225E8EAB300B073A8 /* tableViewCellTableViewCell.swift in Sources */,
 				280AAA9425E8CD6100B073A8 /* OrdercheckViewController.swift in Sources */,

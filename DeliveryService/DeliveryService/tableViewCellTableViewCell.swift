@@ -16,7 +16,6 @@ class tableViewCellTableViewCell: UITableViewCell {
     @IBOutlet var lblperson1: UILabel!
     @IBOutlet var lblperson2: UILabel!
     @IBOutlet var btnMorePeople: UIButton!
-
     @IBOutlet var placeOrder: UIButton!
     @IBOutlet var storeNameStack: UIStackView!
     @IBOutlet var entireCellstack: UIStackView!
@@ -31,5 +30,10 @@ class tableViewCellTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10))
+//    }
+    
 }
